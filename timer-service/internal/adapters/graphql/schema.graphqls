@@ -1,0 +1,26 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+type Pomodoro {
+  id: ID!
+  remaining: String!
+  status: String!
+}
+
+type User {
+  id: ID!
+  name: String!
+}
+
+type Query {
+  pomodoro(id: ID!): Pomodoro!
+  pomodoros: [Pomodoro!]!
+}
+
+type Mutation {
+  Start: Pomodoro!
+  Pause(id: ID!): Pomodoro!
+  Stop(id: ID!): Boolean!
+  Continue(id: ID!): Pomodoro!
+}

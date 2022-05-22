@@ -1,0 +1,4 @@
+service:
+  name: timer-service
+  port: 8080
+  dsn: postgresql://postgres:postgres@localhost:5432/postgres?sslmode=disable
